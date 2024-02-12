@@ -4,14 +4,14 @@ pipeline{
     stage('checkout stage') {
       steps {
         sh 'rm -rf ansiblerepo'
-        sh 'git clone '
+        sh 'git clone https://github.com/Jagruthi111/ansiblerepo.git'
       }
     }
     stage('Invoke playbook')  {
           steps {
         sh 'ansible-playbook -i hosts demo.yml'
       }
-  }
+    }
   }
 }
         
