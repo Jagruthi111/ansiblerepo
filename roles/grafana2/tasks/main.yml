@@ -1,0 +1,23 @@
+---
+# tasks file for grafana2
+- name: Install prerequisites
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - apt-transport-https
+    - software-properties-common
+
+- name: Add Grafana repository key
+  apt_key:
+    url: https://packages.grafana.com/gpg.key
+
+- name: Add Grafana APT repository
+  apt_repository:
+    repo: deb https://packages.grafana.com/oss/deb stable main
+    state: present
+
+- name: Install Grafana
+  apt:
+    name: grafana
+    state: present

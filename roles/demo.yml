@@ -1,0 +1,6 @@
+---
+- name: calling_roles
+  hosts: all
+  roles:
+    - roleseg
+

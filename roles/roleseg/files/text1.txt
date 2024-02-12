@@ -1,0 +1,2 @@
+Welcome { name } to the Devops class
+place { place }
