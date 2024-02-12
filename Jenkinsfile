@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('checkout stage') {
       steps {
-        sh 'rm -rf GrafanaRepo'
-        sh 'git clone '
+        sh 'rm -rf ansiblerepo'
+        sh 'git clone https://github.com/Jagruthi111/ansiblerepo.git'
       }
     }
     stage('running playbook') {
